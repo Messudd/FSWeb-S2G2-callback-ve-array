@@ -119,16 +119,20 @@ function OrtalamaGolSayisi(final_func) {
 	let golToplam = 0;
 	let ortalama;
 	let k = 0;
-	while(k<final_func(fifaData).length){
+	while(k<final_func.length){
 
-		golToplam += (final_func(fifaData)[k]["Home Team Goals"]+final_func(fifaData)[k]["Away Team Goals"]);
+		console.log(final_func[k]["Home Team Goals"]);
+		console.log(final_func[k]["Away Team Goals"]);
+		golToplam += (final_func[k]["Home Team Goals"]+final_func[k]["Away Team Goals"]);
+		
 		k++;
 	}
-	ortalama = (golToplam/final_func(fifaData).length);
-	ortalama.toFixed(2);
-	return Number(ortalama);
+	ortalama = (golToplam/k);
+	let ort = ortalama.toFixed(2);
+	return ort;
 }
-console.log(`Ortalama Gol Sayısı = ${OrtalamaGolSayisi(Finaller)}` );
+console.log(`Ortalama Gol Sayısı = ${OrtalamaGolSayisi(Finaller(fifaData))}` );
+
 
 
 /// EKSTRA ÇALIŞMALAR ///
