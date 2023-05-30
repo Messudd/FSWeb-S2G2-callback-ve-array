@@ -91,15 +91,16 @@ console.log("Kazanan Ülkeler : ",Kazananlar(fifaData,Finaller));
 */
 
 function YillaraGoreKazananlar(fifa_Data,finallerListe,final_yillar,kazananListe) {
-	//    const sloganList = [];
- 	//    for ( let i = 0; i<finallerListe(fifa_Data).length; i++)
- 	//    {
- 	//    	sloganList.push(`${final_yillar(fifa_Data,finallerListe(fifa_Data))[i].Year} yılında, ${kazananListe(fifa_Data,finallerListe(fifa_Data))[i]} dünya kupasını kazandı!`);
- 	//    }
+	    const sloganList = [];
+ 	    for ( let i = 0; i<finallerListe(fifa_Data).length; i++)
+ 	    {
 
- 	//    return sloganList;
+ 	    	sloganList.push(`${final_yillar(fifa_Data,finallerListe)[i]} yılında, ${kazananListe(fifa_Data,finallerListe)[i]} dünya kupasını kazandı!`);
+ 	    }
+
+ 	    return sloganList;
  }
-//console.log("Her yıl için kazanan ülkeler : ",YillaraGoreKazananlar(fifaData,Finaller,Yillar,Kazananlar));
+console.log("Her yıl için kazanan ülkeler : ",YillaraGoreKazananlar(fifaData,Finaller,Yillar,Kazananlar));
 
 
 /*  Görev 6: 
