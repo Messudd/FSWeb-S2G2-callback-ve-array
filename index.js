@@ -121,10 +121,7 @@ function OrtalamaGolSayisi(final_func) {
 	let k = 0;
 	while(k<final_func.length){
 
-		console.log(final_func[k]["Home Team Goals"]);
-		console.log(final_func[k]["Away Team Goals"]);
 		golToplam += (final_func[k]["Home Team Goals"]+final_func[k]["Away Team Goals"]);
-		
 		k++;
 	}
 	ortalama = (golToplam/k);
