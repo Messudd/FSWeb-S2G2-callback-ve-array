@@ -6,15 +6,32 @@ const { fifaData } = require('./fifa.js')
 	💡 İPUCU: Öncelikle datayı filtrelemek isteyebilirsiniz */
 
 //(a) 2014 Dünya kupası Finali Evsahibi takım ismi (dizide "Home Team Name" anahtarı)
+const finalName_2014 = fifaData.filter((arrayFinal)=> arrayFinal.Stage && arrayFinal.Year === 2014);
+const sonuc = finalName_2014[0]["Home Team Name"];
+
+	console.log(`2014 - Finali Ev Sahibi Takım : ${sonuc}`);
+	
 
 //(b) 2014 Dünya kupası Finali Deplasman takım ismi  (dizide "Away Team Name" anahtarı)
 
+const yeniSonuc = finalName_2014[0]["Away Team Name"];
+
+	console.log(`2014 - Finali Deplasman Takım Adı : ${yeniSonuc}`);
+
 //(c) 2014 Dünya kupası finali Ev sahibi takım golleri (dizide "Home Team Goals" anahtarı)
+
+const evSahibiGol = finalName_2014[0]["Home Team Goals"];
+	console.log("Ev sahibi Takımın Golleri : "+ evSahibiGol);
 
 //(d)2014 Dünya kupası finali Deplasman takım golleri  (dizide "Away Team Goals" anahtarı)
 
-//(e) 2014 Dünya kupası finali kazananı*/
+const deplasmanGol = finalName_2014[0]["Away Team Goals"];
+	console.log("Deplasman Takımın Golleri : "+ deplasmanGol);
 
+
+//(e) 2014 Dünya kupası finali kazananı*/
+const State =  evSahibiGol > deplasmanGol ? `Kazanan Takım : ${finalName_2014[0]["Home Team Name"]}` : `Kazanan Takım : ${finalName_2014[0]["Away Team Name"]}`
+	console.log(State);
 /*  Görev 2: 
 	Finaller adlı fonksiyonu kullanarak aşağıdakileri uygulayın:
 	1. Bir dizi(array) olan Fifa datasını fonksiyonun birinci parametresi olarak alacak
