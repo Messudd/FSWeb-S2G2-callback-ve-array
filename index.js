@@ -6,7 +6,7 @@ const { fifaData } = require('./fifa.js')
 	💡 İPUCU: Öncelikle datayı filtrelemek isteyebilirsiniz */
 
 //(a) 2014 Dünya kupası Finali Evsahibi takım ismi (dizide "Home Team Name" anahtarı)
-const finalName_2014 = fifaData.filter((arrayFinal)=> arrayFinal.Stage && arrayFinal.Year === 2014);
+const finalName_2014 = fifaData.filter((arrayFinal)=> arrayFinal.Stage === "Final" && arrayFinal.Year === 2014);
 const sonuc = finalName_2014[0]["Home Team Name"];
 
 	console.log(`2014 - Finali Ev Sahibi Takım : ${sonuc}`);
